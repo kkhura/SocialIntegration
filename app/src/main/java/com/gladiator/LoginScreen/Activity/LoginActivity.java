@@ -136,12 +136,15 @@ public class LoginActivity extends AppCompatActivity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
+                        if (response == null || response.getJSONObject() == null) {
+                            return;
+                        }
                         loginFacebookResponse = new FacebookRespose(response.getJSONObject(), mTransactionId);
                     }
                 }
         );
         Bundle parameters = new Bundle();
-        parameters.putString("fields", "id,name,email,gender,birthday,location,locale,timezone,about,cover,relationship_status,religion,picture");
+        parameters.putString("fields", "id,name,email,gender,birthday,cover,relationship_status,picture,first_name,last_name");
         graphRequest.setParameters(parameters);
         graphRequest.executeAsync();
     }

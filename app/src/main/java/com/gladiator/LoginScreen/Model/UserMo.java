@@ -11,7 +11,7 @@ public class UserMo extends RealmObject {
 
     @PrimaryKey
     private String email;
-    private long userId;
+    private String userId;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -24,11 +24,11 @@ public class UserMo extends RealmObject {
     private boolean salutation;
     private RealmList<FriendInfo> friendList;
 
-    public long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
