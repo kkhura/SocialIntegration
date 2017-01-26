@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_my_health">"&#x27;"</string>
+    <string name="fa_mail">"&#x28;"</string>
+    <string name="fa_notifications">"&#x29;"</string>
+    <string name="fa_settings">"&#x2a;"</string>
+    <string name="fa_vaccination">"&#x4f;"</string>
+    <string name="fa_smiley_sad">&#x30;</string>
+    <string name="fa_faq">&#x2e;</string>
+    <string name="fa_terms_of_use">&#x2f;</string>
+    <string name="fa_care_plan">&#x5b;</string>
+    <string name="fa_what_next">&#x58;</string>
+    <string name="fa_cross_ico">&#x24;</string>
+    <string name="fa_back_ico">&#x25;</string>
+
+    <string name="fa_plus">&#x3a;</string>
+    <string name="fa_minus">&#x39;</string>
+    <string name="fa_submit">&#x3c;</string>
+    <string name="fa_edit">&#x3b;</string>
+    <string name="fa_clock">"&#x3f;"</string>
+    <string name="fa_search">&#x21;</string>
+    <string name="fa_overflow">&#x26;</string>
+    <string name="fa_cross_new">"&#x40;"</string>
+    <string name="fa_profile">&#x3e;</string>
+    <string name="fa_record_plus">&#x44;</string>
+
+    <string name="fa_lab_report_icon">&#x37;</string>
+    <string name="fa_prescription">&#x36;</string>
+    <string name="fa_discharge_note">&#x38;</string>
+
+    <string name="fa_camera_icon">&#x31;</string>
+    <string name="fa_star">&#x2b;</string>
+    <string name="fa_share">&#x2d;</string>
+
+    <string name="fa_observation_bp">&#x49;</string>
+    <string name="fa_observation_bmi">&#x47;</string>
+    <string name="fa_observation_glucose">&#x46;</string>
+
+    <string name="fa_drop_filled">&#x35;</string>
+
+
+    <string name="fa_appointments_ico">&#x62;</string>
+    <string name="fa_doctor_ico">&#x4c;</string>
+    <string name="fa_speciality_ico">&#x4d;</string>
+    <string name="fa_services_ico">&#x52;</string>
+
+    <string name="fa_viewall_orders">&#x6b;</string>
+    <string name="fa_delete_ico">&#x51;</string>
+    <string name="fa_minus_filled">&#x65;</string>
+    <string name="fa_tick_filled">&#x4e;</string>
+    <string name="fa_india_currency">&#x53;</string>
+    <string name="fa_info">&#x7a;</string>
+    <string name="fa_calander">&#x62;</string>
+
+    <string name="fa_fisike_icon">&#x7c;</string>
+    <string name="fa_fisike_spec_icon">&#x7d;</string>
+    <string name="fa_tablet">&#x2022;</string>
+    <string name="fa_injection">&#x2019;</string>
+    <string name="fa_spray">&#x2018;</string>
+    <string name="fa_drops">&#x17d;</string>
+    <string name="fa_sachets">&#x2020;</string>
+    <string name="fa_powder">&#x152;</string>
+    <string name="fa_granule">&#x2039;</string>
+    <string name="fa_creme">&#x160;</string>
+    <string name="fa_toothpaste">&#x2030;</string>
+    <string name="fa_moutwash">&#x2c6;</string>
+    <string name="fa_ointment">&#x2021;</string>
+    <string name="fa_gum_paint">&#x201e;</string>
+    <string name="fa_oil">&#x20ac;</string>
+    <string name="fa_suspension">&#x192;</string>
+    <string name="fa_others">&#x2022;</string>
+    <string name="fa_syrup">&#x201c;</string>
+    <string name="fa_capsule">&#x201d;</string>
+</resources>

@@ -1,6 +1,5 @@
 package com.gladiator.LoginScreen.Response;
 
-import com.gladiator.LoginScreen.Model.FriendInfo;
 import com.gladiator.LoginScreen.Model.UserMo;
 import com.gladiator.Network.BaseResponse;
 

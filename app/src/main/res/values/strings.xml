@@ -3,4 +3,22 @@
     <string name="title_activity_main">Gladiator</string>
     <string name="app_id">1026864114034290</string>
     <string name="login_canceled">The request has been cancelled</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="drawer_opened">Drawer Opened</string>
+    <string name="drawer_closed">Drawer Closed</string>
+
+    <string-array name="nav_drawer_items">
+        <item>My Health</item>
+        <item>Messages</item>
+        <item>Notifications</item>
+    </string-array>
+    <string-array name="nav_drawer_icons">
+        <item>@string/fa_my_health</item>
+        <item>@string/fa_mail</item>
+        <item>@string/fa_notifications</item>
+    </string-array>
+
+
+
+
 </resources>
