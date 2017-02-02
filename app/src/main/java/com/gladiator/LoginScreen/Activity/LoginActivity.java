@@ -19,6 +19,7 @@ import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.gladiator.HomeScreen.Activity.HomeActivity;
 import com.gladiator.LoginScreen.Model.UserMo;
 import com.gladiator.LoginScreen.Response.FacebookRespose;
 import com.gladiator.R;
@@ -111,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-//                        getProfileInformation();
+                        getProfileInformation();
                     }
                 });
             }
@@ -140,6 +141,10 @@ public class LoginActivity extends AppCompatActivity {
                             return;
                         }
                         loginFacebookResponse = new FacebookRespose(response.getJSONObject(), mTransactionId);
+                        if (loginFacebookResponse.getUserMo() != null && loginFacebookResponse.getUserMo().isSalutation()) {
+                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        }
+
                     }
                 }
         );

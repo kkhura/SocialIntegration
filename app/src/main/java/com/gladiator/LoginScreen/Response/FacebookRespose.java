@@ -38,7 +38,7 @@ public class FacebookRespose extends BaseResponse {
         }
 
         // Create an object
-        UserMo userMo = myRealm.createObject(UserMo.class);
+        userMo = myRealm.createObject(UserMo.class);
         userMo.setUserId(response.optString("id"));
         userMo.setName(response.optString("name"));
         userMo.setFirstName(response.optString("first_name"));
@@ -57,7 +57,11 @@ public class FacebookRespose extends BaseResponse {
         if (coverObject != null) {
             userMo.setCover(coverObject.optString("source"));
         }
+        userMo.setSalutation(true);
         myRealm.commitTransaction();
+    }
 
+    public UserMo getUserMo() {
+        return userMo;
     }
 }

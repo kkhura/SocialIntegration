@@ -97,7 +97,7 @@
                 android:visibility="gone" />
 
 
-            <com.mphrx.fisike.icomoon.IconTextView
+            <com.gladiator.icomoon.IconTextView
                 android:id="@+id/bt_toolbar_right"
                 android:layout_width="wrap_content"
                 android:layout_height="?attr/actionBarSize"
