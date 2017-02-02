@@ -25,4 +25,9 @@ public class Utils {
     public static void UpdateSelectItemFromNavigationDrawer(boolean b, int position) {
 
     }
+
+    public static float pixelsToSp(Context context, float px) {
+        float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+        return px / scaledDensity;
+    }
 }

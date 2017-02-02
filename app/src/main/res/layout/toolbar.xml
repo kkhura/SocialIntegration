@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentInsetEnd="0dp"
+    android:contentInsetLeft="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetStart="0dp"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:layout_collapseMode="pin"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/ic_back_w_shadow"
+            android:visibility="visible"
+            android:layout_toLeftOf="@+id/toolbar_right_text">
+
+            <ImageButton
+                android:id="@+id/bt_toolbar_cross"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/ic_back_w_shadow"
+                android:visibility="visible" />
+
+            <com.gladiator.CustomView.CustomFontTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/bt_toolbar_icon"
+                android:layout_toRightOf="@+id/bt_toolbar_cross"
+                android:ellipsize="end"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:text="toolbar_title"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                custom:font="regular" />
+
+
+            <com.gladiator.CustomView.CustomFontTextView
+                android:id="@+id/toolbar_sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_title"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/bt_toolbar_icon"
+                android:layout_toRightOf="@+id/bt_toolbar_cross"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:text="@string/toolbar_title"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                custom:font="regular" />
+
+
+            <com.gladiator.icomoon.IconTextView
+                android:id="@+id/bt_toolbar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/bt_toolbar_right"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:paddingLeft="6dp"
+                android:paddingRight="5dp"
+                android:text="@string/fa_submit"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:visibility="gone" />
+
+
+            <com.mphrx.fisike.icomoon.IconTextView
+                android:id="@+id/bt_toolbar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:paddingRight="8dp"
+                android:text="@string/fa_submit"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <com.gladiator.CustomView.CustomFontTextView
+            android:id="@+id/toolbar_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:text="@string/txt_cancel"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            custom:font="medium" />
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

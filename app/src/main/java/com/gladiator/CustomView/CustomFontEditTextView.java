@@ -3,16 +3,12 @@ package com.gladiator.CustomView;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
@@ -27,14 +23,11 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mphrx.fisike.R;
-import com.mphrx.fisike.constant.TextConstants;
-import com.mphrx.fisike.constant.VariableConstants;
-import com.mphrx.fisike.icomoon.IconDrawable;
-import com.mphrx.fisike.utils.Utils;
+import com.gladiator.Constant.VariableConstants;
+import com.gladiator.R;
+import com.gladiator.Utility.Utils;
 
 import java.lang.reflect.Field;
 
@@ -137,7 +130,7 @@ public class CustomFontEditTextView extends TextInputLayout {
 
 
         //setting text size
-        editText.setTextSize(Utils.pixelsToSp(context, context.getResources().getDimension(R.dimen.theme_edittext_text_size)));
+        editText.setTextSize(Utils.pixelsToSp(context, 14));
 
         editText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -436,7 +429,7 @@ public class CustomFontEditTextView extends TextInputLayout {
 
             @Override
             protected char[] getAcceptedChars() {
-                return TextConstants.passwordAllowedChars;
+                return VariableConstants.passwordAllowedChars;
             }
         };
         editText.setKeyListener(PwdkeyListener);
@@ -448,7 +441,7 @@ public class CustomFontEditTextView extends TextInputLayout {
         NumberKeyListener aphaNumericKeyListener = new NumberKeyListener() {
             @Override
             protected char[] getAcceptedChars() {
-                return TextConstants.alphaNumericAllowedChars;
+                return VariableConstants.alphaNumericAllowedChars;
             }
 
             @Override
@@ -469,7 +462,7 @@ public class CustomFontEditTextView extends TextInputLayout {
 
             @Override
             protected char[] getAcceptedChars() {
-                return TextConstants.mobilenoAllowedChars;
+                return VariableConstants.mobilenoAllowedChars;
             }
         };
         editText.setKeyListener(PwdkeyListener);

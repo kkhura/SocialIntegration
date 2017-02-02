@@ -51,7 +51,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.EdgeEffect;
 import android.widget.OverScroller;
 
-import com.mphrx.fisike.R;
+
+import com.gladiator.R;
 
 import java.lang.ref.WeakReference;
 import java.util.List;

@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape   >
+            <solid android:color="@color/theme_btn_normal" />
+            <size android:width="3dp" />
+        </shape>
+    </item>
+    <item android:left="3dp">
+        <shape>
+            <solid android:color="@color/card_bg" />
+        </shape>
+    </item>
+</layer-list>

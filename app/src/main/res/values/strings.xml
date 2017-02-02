@@ -6,6 +6,8 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="drawer_opened">Drawer Opened</string>
     <string name="drawer_closed">Drawer Closed</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="toolbar_title">Title</string>
 
     <string-array name="nav_drawer_items">
         <item>My Health</item>

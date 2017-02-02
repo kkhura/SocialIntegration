@@ -20,7 +20,7 @@ import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.OverScroller;
 
-import com.mphrx.fisike.R;
+import com.gladiator.R;
 
 import java.util.ArrayList;
 import java.util.List;

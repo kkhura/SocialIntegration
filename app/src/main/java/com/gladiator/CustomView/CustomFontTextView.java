@@ -1,17 +1,14 @@
 package com.gladiator.CustomView;
 
-import com.mphrx.fisike.R;
-import com.mphrx.fisike.constant.VariableConstants;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.view.TextureView;
- import com.mphrx.fisike.customview.CustomFontEditTextView;
 import android.widget.TextView;
 
-import com.mphrx.fisike.customview.CustomFontTextView;
+import com.gladiator.Constant.VariableConstants;
+import com.gladiator.R;
+
 
 public class CustomFontTextView extends TextView {
 

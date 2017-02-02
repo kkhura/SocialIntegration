@@ -3,17 +3,11 @@ package com.gladiator.CustomView;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.widget.Button;
-import android.widget.EditText;
 
-import  com.mphrx.fisike.customview.CustomFontButton ;
-import com.mphrx.fisike.R;
-import com.mphrx.fisike.constant.VariableConstants;
-import com.mphrx.fisike.utils.GenericTextWatcher;
-import com.mphrx.fisike.utils.Utils;
+import com.gladiator.Constant.VariableConstants;
+import com.gladiator.R;
 
 public class CustomFontButton extends Button {
 	public static final String ANDROID_SCHEMA = "http://schemas.android.com/apk/res/android";

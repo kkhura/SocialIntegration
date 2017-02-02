@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
+import com.gladiator.BaseActivity.NavigationDrawerActivity;
 import com.gladiator.R;
 
 /**
@@ -11,7 +12,7 @@ import com.gladiator.R;
  *
  * @author kkhurana
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends NavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,4 +20,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
+    @Override
+    public void setNavigationDrawerAdapter() {
+
+    }
 }

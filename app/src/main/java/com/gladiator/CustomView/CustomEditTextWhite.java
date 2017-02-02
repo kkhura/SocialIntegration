@@ -26,7 +26,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.gladiator.Constant.VariableConstants;
 import com.gladiator.R;
+import com.gladiator.Utility.Utils;
 import com.gladiator.icomoon.IconDrawable;
 
 import java.lang.reflect.Field;
@@ -129,7 +131,7 @@ public class CustomEditTextWhite  extends TextInputLayout {
 
 
         //setting text size
-        editText.setTextSize(Utils.pixelsToSp(context, context.getResources().getDimension(R.dimen.theme_edittext_text_size)));
+        editText.setTextSize(Utils.pixelsToSp(context, 14));
 
         editText.addTextChangedListener(new TextWatcher() {
 
@@ -431,7 +433,7 @@ public class CustomEditTextWhite  extends TextInputLayout {
 
             @Override
             protected char[] getAcceptedChars() {
-                return TextConstants.passwordAllowedChars;
+                return VariableConstants.passwordAllowedChars;
             }
         };
         editText.setKeyListener(PwdkeyListener);
