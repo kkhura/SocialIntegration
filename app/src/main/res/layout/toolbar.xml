@@ -20,18 +20,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/action_bar_bg_darker">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/toolbar_right_text"
             android:background="?selectableItemBackgroundBorderless"
             android:gravity="center_vertical"
             android:paddingLeft="15dp"
             android:paddingRight="16dp"
             android:src="@drawable/ic_back_w_shadow"
-            android:visibility="visible"
-            android:layout_toLeftOf="@+id/toolbar_right_text">
+            android:visibility="visible">
 
             <ImageButton
                 android:id="@+id/bt_toolbar_cross"
@@ -42,10 +43,10 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:paddingRight="16dp"
-                android:src="@drawable/ic_back_w_shadow"
+                android:src="@drawable/ic_drawer"
                 android:visibility="visible" />
 
-            <com.gladiator.CustomView.CustomFontTextView
+            <com.kkhura.customview.CustomFontTextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,15 +55,14 @@
                 android:layout_toRightOf="@+id/bt_toolbar_cross"
                 android:ellipsize="end"
                 android:paddingRight="2dp"
-                android:singleLine="true"
-                android:text="toolbar_title"
+                android:text="@string/home_title"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:visibility="visible"
                 custom:font="regular" />
 
 
-            <com.gladiator.CustomView.CustomFontTextView
+            <com.kkhura.customview.CustomFontTextView
                 android:id="@+id/toolbar_sub_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                 custom:font="regular" />
 
 
-            <com.gladiator.icomoon.IconTextView
+            <com.kkhura.icomoon.IconTextView
                 android:id="@+id/bt_toolbar_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="?attr/actionBarSize"
@@ -97,7 +97,7 @@
                 android:visibility="gone" />
 
 
-            <com.gladiator.icomoon.IconTextView
+            <com.kkhura.icomoon.IconTextView
                 android:id="@+id/bt_toolbar_right"
                 android:layout_width="wrap_content"
                 android:layout_height="?attr/actionBarSize"
@@ -111,10 +111,10 @@
                 android:text="@string/fa_submit"
                 android:textColor="@android:color/white"
                 android:textSize="32sp"
-                android:visibility="visible" />
+                android:visibility="gone" />
         </RelativeLayout>
 
-        <com.gladiator.CustomView.CustomFontTextView
+        <com.kkhura.customview.CustomFontTextView
             android:id="@+id/toolbar_right_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

@@ -1,0 +1,55 @@
+{
+  "product": [
+    {
+      "itemId": 1,
+      "itemName": "Kaju",
+      "itemPic": "http://www.brahmayurved.com/images/brahm/6220VENAMRA%20(Kaju)%20-Anacardium%20occidentale%20Linn.-fruits.jpg",
+      "itemSellingPrice": 400,
+      "itemMRP": 460,
+      "itemDiscountInPercent": 20,
+      "itemDiscountInPrice": 60,
+      "itemCurrency": " Rs.",
+      "itemCurrencySymbol": " ?",
+      "itemDescription": "Best quality kaju.",
+      "itemQuantity": "Kg"
+    },    {
+      "itemId": 2,
+      "itemName": "item2",
+      "itemPic": "http://www.brahmayurved.com/images/brahm/6220VENAMRA%20(Kaju)%20-Anacardium%20occidentale%20Linn.-fruits.jpg",
+      "itemSellingPrice": 100,
+      "itemMRP": 110,
+      "itemDiscountInPercent": 5,
+      "itemDiscountInPrice": 10,
+      "itemCurrency": " Rs.",
+      "itemCurrencySymbol": " ?",
+      "itemDescription": "Best quality kaju.",
+      "itemQuantity": "Kg"
+    },    {
+      "itemId": 3,
+      "itemName": "Item3",
+      "itemPic": "http://www.brahmayurved.com/images/brahm/6220VENAMRA%20(Kaju)%20-Anacardium%20occidentale%20Linn.-fruits.jpg",
+      "itemSellingPrice": 210,
+      "itemMRP": 250,
+      "itemDiscountInPercent": 10,
+      "itemDiscountInPrice": 40,
+      "itemCurrency": " Rs.",
+      "itemCurrencySymbol": " ?",
+      "itemDescription": "Best quality kaju.",
+      "itemQuantity": "Kg"
+    },    {
+      "itemId": 4,
+      "itemName": "Item4",
+      "itemPic": "http://www.brahmayurved.com/images/brahm/6220VENAMRA%20(Kaju)%20-Anacardium%20occidentale%20Linn.-fruits.jpg",
+      "itemSellingPrice": 250,
+      "itemMRP": 260,
+      "itemDiscountInPercent": 5,
+      "itemDiscountInPrice": 10,
+      "itemCurrency": " Rs.",
+      "itemCurrencySymbol": " ?",
+      "itemDescription": "Best quality kaju.",
+      "itemQuantity": "Kg"
+    }
+  ],
+  "syncTime": "SystemMillisecond",
+  "TotalCount": 10
+}

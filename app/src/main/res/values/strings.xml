@@ -8,6 +8,7 @@
     <string name="drawer_closed">Drawer Closed</string>
     <string name="txt_cancel">Cancel</string>
     <string name="toolbar_title">Title</string>
+    <string name="home_title">Home</string>
 
     <string-array name="nav_drawer_items">
         <item>My Health</item>
