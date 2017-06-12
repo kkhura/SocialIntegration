@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 23
@@ -28,4 +29,5 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.16'
     compile 'com.squareup:otto:1.3.8'
     compile 'com.google.code.gson:gson:2.3'
+    compile 'com.google.firebase:firebase-core:10.0.1'
 }

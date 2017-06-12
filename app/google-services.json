@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "109198844614",
+    "firebase_url": "https://test-8c69e.firebaseio.com",
+    "project_id": "test-8c69e",
+    "storage_bucket": "test-8c69e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109198844614:android:6d655d102ca70d54",
+        "android_client_info": {
+          "package_name": "com.kkhura.emart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109198844614-s3432tgc0cil07dq5qqp07jom25umv2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kkhura.emart",
+            "certificate_hash": "f823e14237731b3572cb5ffc83ba406eb0a51121"
+          }
+        },
+        {
+          "client_id": "109198844614-i8p1kbovfuvefndh7acp8k4o9skf7qm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4jnZv7gxgQZOL6Fj45rUu4d9JcL46r6c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109198844614-i8p1kbovfuvefndh7acp8k4o9skf7qm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

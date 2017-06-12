@@ -5,8 +5,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.android.volley.VolleyError;
+import com.kkhura.R;
 import com.kkhura.homescreen.response.ProductRespose;
 import com.kkhura.loginscreen.response.FacebookRespose;
+import com.kkhura.network.BaseObjectRequest;
 import com.kkhura.network.BusProvider;
 
 import org.json.JSONException;
@@ -20,39 +23,15 @@ import java.io.UnsupportedEncodingException;
  * Created by Kailash Khurana on 3/22/2017.
  */
 
-public class ReadFileTask extends AsyncTask<Void, Void, Void> {
-    private ProgressDialog progressDialog;
+public class ReadFileTask extends BaseObjectRequest {
     private Context context;
     private String json;
     private long mTransactionId;
     private ProductRespose productRespose;
 
     public ReadFileTask(Context context, long mTransactionId) {
-        progressDialog = new ProgressDialog(context);
         this.context = context;
         this.mTransactionId = mTransactionId;
-    }
-
-    @Override
-    protected void onPreExecute() {
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-        super.onPreExecute();
-    }
-
-    @Override
-    protected Void doInBackground(Void... params) {
-        productRespose = new ProductRespose(loadJSONFromAsset(), mTransactionId);
-        return null;
-    }
-
-    @Override
-    protected void onPostExecute(Void aVoid) {
-        if (progressDialog.isShowing()) {
-            progressDialog.cancel();
-        }
-        BusProvider.getInstance().post(productRespose);
-        super.onPostExecute(aVoid);
     }
 
     public JSONObject loadJSONFromAsset() {
@@ -75,5 +54,20 @@ public class ReadFileTask extends AsyncTask<Void, Void, Void> {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public void doInBackground() {
+        productRespose = new ProductRespose(loadJSONFromAsset(), mTransactionId);
+    }
+
+    @Override
+    public void onErrorResponse(VolleyError error) {
+        BusProvider.getInstance().post(null);
+    }
+
+    @Override
+    public void onResponse(JSONObject response) {
+        BusProvider.getInstance().post(productRespose);
     }
 }
