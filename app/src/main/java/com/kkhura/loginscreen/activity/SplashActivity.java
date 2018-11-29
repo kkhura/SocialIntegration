@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        if (getDatabase()==null || getDatabase().isSalutation()) {
+        if (getDatabase() == null || getDatabase().isSalutation()) {
             startActivity(new Intent(this, LoginActivity.class));
         } else {
             startActivity(new Intent(this, HomeActivity.class));

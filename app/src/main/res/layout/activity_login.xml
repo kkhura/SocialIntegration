@@ -24,7 +24,7 @@
             android:onClick="onClick"
             android:layout_below="@+id/loginBtn"
             android:layout_marginTop="20dp"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_centerHorizontal="true"
             android:text="Gson" />
     </RelativeLayout>

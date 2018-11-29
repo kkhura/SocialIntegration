@@ -10,6 +10,11 @@
     <string name="toolbar_title">Title</string>
     <string name="home_title">Home</string>
     <string name="please_wait">Please Wait...</string>
+    <string name="email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="btn_forgot_password">Forget Password</string>
+    <string name="btn_link_to_login">Link</string>
 
     <string-array name="nav_drawer_items">
         <item>My Health</item>

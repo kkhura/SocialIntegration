@@ -1,10 +1,16 @@
 package com.kkhura.loginscreen.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -18,11 +24,20 @@ import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.kkhura.R;
 import com.kkhura.homescreen.activity.HomeActivity;
 import com.kkhura.loginscreen.model.UserMo;
 import com.kkhura.loginscreen.response.FacebookRespose;
-import com.kkhura.R;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 import io.realm.Realm;
@@ -37,6 +52,18 @@ public class LoginActivity extends AppCompatActivity {
     private AccessTokenTracker accessTokenTracker;
     private long mTransactionId;
     private FacebookRespose loginFacebookResponse;
+    private Button btnGson;
+    private FirebaseAuth mAuth;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth = FirebaseAuth.getInstance();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +75,21 @@ public class LoginActivity extends AppCompatActivity {
 
         loginButton = (LoginButton) findViewById(R.id.loginBtn);
 
+        btnGson = (Button) findViewById(R.id.btnGson);
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.kkhura.emart",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
         accessTokenTracker = new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(
@@ -127,7 +169,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void getProfileInformation() {
-        GraphRequest graphRequest = new GraphRequest(
+
+        /*GraphRequest graphRequest = new GraphRequest(
                 accessToken,
                 "/" + accessToken.getUserId(),
                 null,
@@ -144,11 +187,34 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 }
-        );
-        Bundle parameters = new Bundle();
+        );*/
+        /*Bundle parameters = new Bundle();
         parameters.putString("fields", "id,name,email,gender,birthday,cover,relationship_status,picture,first_name,last_name");
         graphRequest.setParameters(parameters);
-        graphRequest.executeAsync();
+        graphRequest.executeAsync();*/
+
+        handleFaceBookLogin();
+
+    }
+
+    private void handleFaceBookLogin() {
+        AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     public long getTransactionId() {
@@ -164,7 +230,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public UserMo getDatabase() {
         try {
-//            MyApplication.getInstance();
             Realm myRealm = Realm.getDefaultInstance();
             RealmResults<UserMo> results1 =
                     myRealm.where(UserMo.class).findAll();
